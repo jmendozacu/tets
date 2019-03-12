@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <example_index_index>
+        <reference name="content">
+            <block type="example/example" name="butvin_example" template="example/example.phtml" />
+            <!--<block type="example/example" name="butvin_example_form" template="example/form.phtml" />-->
+        </reference>
+    </example_index_index>
+</layout>

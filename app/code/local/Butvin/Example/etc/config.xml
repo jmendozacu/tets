@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+	<modules>
+		<Butvin_Example>
+			<version>0.1.0</version>
+		</Butvin_Example>
+	</modules>
+
+	<global>
+		<models>
+			<example>
+				<class>Butvin_Example_Model</class>
+				<resourceModel>example_resource</resourceModel>
+			</example>
+			<example_resource>
+				<class>Butvin_Example_Model_Resource</class>
+				<entities>
+					<example>
+						<table>example</table>
+					</example>
+				</entities>
+			</example_resource>
+		</models>
+
+		<resources>
+			<example_setup>
+				<setup>
+					<module>Butvin_Example</module>
+					<!-- <Namespace>_<Module>_Model_Resource_Setup -->
+					<class>Butvin_Example_Model_Resource_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</example_setup>
+			<example_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</example_write>
+			<example_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</example_read>
+		</resources>
+
+		<blocks>
+			<example>
+				<class>Butvin_Example_Block</class>
+			</example>
+		</blocks>
+
+		<events>
+			<!-- controller_action_<post>||<pre>dispatch_<router_name>_<controller_name>_<action_name> -->
+			<controller_action_predispatch_example_index_saveExample> <!-- event name, will be triggered on-->
+				<observers>
+					<butvin_example> <!-- unique event name (random) -->
+						<type>singleton</type>
+						<class>Butvin_Example_Model_Observer</class>
+						<method>rebuildDataBeforeSave</method>
+					</butvin_example>
+				</observers>
+			</controller_action_predispatch_example_index_saveExample><!-- /my cuseom event-->
+
+		</events>
+
+		<!--<helpers>-->
+			<!--<example>-->
+				<!--<class>Butvin_Example_Helper</class>-->
+			<!--</example>-->
+		<!--</helpers>-->
+
+	</global>
+
+	<frontend>
+		<routers>
+			<example>
+			<use>standard</use>
+			<args>
+				<module>Butvin_Example</module>
+				<frontName>example</frontName>
+			</args>
+			</example>
+		</routers>
+		<layout>
+			<updates>
+				<example>
+				<file>example/example.xml</file>
+			</example>
+		</updates>
+		</layout>
+	</frontend>
+
+
+</config>

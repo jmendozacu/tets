@@ -1,0 +1,35 @@
+<form action="<?php echo $this->getUrl('brochure/index/post'); ?>" id="brochureform" method="post">
+    <ul class="form-list">
+        <li><label>Name</label><br>
+            <input class="input-text required-entry" id="name" name="name" style="width: 250px;" type="text"></li>
+
+<!--        <li><label>Email</label><br>-->
+<!--            <input class="input-text required-entry" id="email" name="email" style="width: 250px;" type="text"></li>-->
+<!---->
+<!--        <li><label>Address Line 1</label><br>-->
+<!--            <input class="input-text required-entry" id="address_line_1" name="address_line_1" style="width: 250px;" type="text"></li>-->
+<!---->
+<!--        <li><label>Address Line 2</label><br>-->
+<!--            <input class="input-text required-entry" id="address_line_2" name="address_line_2" style="width: 250px;" type="text"></li>-->
+<!---->
+<!--        <li><label>Address Line 3</label><br>-->
+<!--            <input class="input-text" id="address_line_3" name="address_line_3" style="width: 250px;" type="text"></li>-->
+<!---->
+<!--        <li><label>City</label><br>-->
+<!--            <input class="input-text required-entry" id="city" name="city" style="width: 250px;" type="text"></li>-->
+<!---->
+<!--        <li><label>Post Code</label><br>-->
+<!--            <input class="input-text required-entry" id="postcode" name="postcode" style="width: 250px;" type="text"></li>-->
+<!---->
+<!--        <li><label>Country</label><br>-->
+<!--            <input class="input-text required-entry" id="country" name="country" style="width: 250px;" type="text"></li>-->
+    </ul>
+    <button class="form-button-alt" type="submit">
+        <span>Submit Your Request</span>
+    </button>
+</form>
+<script type="text/javascript">
+    //<![CDATA[
+    var brochureform = new VarienForm('brochureform', true);
+    //]]>
+</script>
